@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21"
+    xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TableroController" prefWidth="1100" prefHeight="700">
+
+    <center>
+        <GridPane fx:id="tableroGrid" alignment="CENTER" prefWidth="640" prefHeight="640"/>
+    </center>
+
+    <right>
+        <VBox spacing="15" prefWidth="300" style="-fx-background-color:#2C3E50;">
+
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+
+            <Label text="AJEDREZ FX" style="-fx-font-size:28px;
+                          -fx-font-weight:bold;
+                          -fx-text-fill:white;"/>
+
+            <Separator/>
+
+            <Label text="Turno" style="-fx-text-fill:white;
+                          -fx-font-size:18px;"/>
+
+            <Label fx:id="lblTurno" text="Blancas" style="-fx-text-fill:#F1C40F;
+                          -fx-font-size:22px;
+                          -fx-font-weight:bold;"/>
+
+            <Separator/>
+
+            <Label text="Estado" style="-fx-text-fill:white;
+                          -fx-font-size:18px;"/>
+
+            <Label fx:id="lblEstado" text="Partida en curso" style="-fx-text-fill:#2ECC71;
+                          -fx-font-size:18px;"/>
+
+            <Separator/>
+
+            <!-- Se removieron el Historial y las Piezas Capturadas desde aquí -->
+
+            <Button fx:id="btnNueva" text="Nueva partida" onAction="#nuevaPartida"/>
+
+            <Button fx:id="btnReiniciar" text="Reiniciar" onAction="#reiniciar"/>
+
+            <Button fx:id="btnSalir" text="Salir" onAction="#salir"/>
+
+        </VBox>
+    </right>
+
+</BorderPane>
